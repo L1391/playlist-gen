@@ -1,2 +1,7 @@
 # playlist-gen
-Python files to make youtube playlists
+Python files to make youtube playlists when you don't want Spotify, Pandora, or a YouTube account.
+
+## requirements
+Python libraries tkinter, keyboard, time, random
+Browser with Ctrl-L url select shortcut and Ctrl-tab switch tabs shortcut (I use Firefox)
+File names playlist.txt in the same folder
