@@ -1,7 +1,9 @@
 import random
 
+playlist_name = input("name of playlist to shuffle ")
+
 #read file to display new shuffled playlist url
-f = open('playlist.txt', 'r')
+f = open('playlist' + playlist_name + '.txt', 'r')
 playlist_ids = f.read().split(',')
 random.shuffle(playlist_ids)
 f.close()

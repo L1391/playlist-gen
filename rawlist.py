@@ -1,6 +1,7 @@
+playlist_name = input("name of playlist to retrieve ")
 
 #read file to display new shuffled playlist url
-f = open('playlist.txt', 'r')
+f = open('playlist' + playlist_name + '.txt', 'r')
 playlist_ids = f.read()
 f.close()
 

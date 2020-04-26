@@ -7,6 +7,8 @@ prev_urls = []
 video_ids = []
 root = tkinter.Tk()
 
+playlist_name = input("name of playlist to add to ")
+
 time.sleep(0.6)
 
 prev_clipboard = "fillerclipboard"
@@ -36,14 +38,14 @@ for i in range(50):
     url_parts = curr_clipboard.split("/")
     if (len(url_parts) > 3):
         if url_parts[2] == "www.youtube.com" and url_parts[3][0:8] == "watch?v=":
-            video_ids.append(url_parts[3][8:])
+            video_ids.append(url_parts[3][8:19])
             print("added video id")
     
     #switch tabs
     keyboard.press_and_release('ctrl + tab')
 
 #add ids to file
-f = open('playlist.txt', 'a')
+f = open('playlist' + playlist_name + '.txt', 'a')
 for i in range(len(video_ids)):
     f.write(',' + video_ids[i])
 f.close()
